@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+}
+
+section {
+  margin-top: 5rem;
+  padding: 0 5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  background: #373b44;
+  background: -webkit-linear-gradient(to bottom, #4286f4, #373b44);
+  background: linear-gradient(to bottom, #4286f4, #373b44);
+}
