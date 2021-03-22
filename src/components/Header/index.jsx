@@ -1,9 +1,15 @@
-import React from "react";
-import "./style.css";
+import React, {useState} from "react";
+import HeaderWrapper from "./header";
+import cx from "classnames";
 
 const Header = () => {
+  const [scrollTop, setScrollTop] = useState(0);
+  document.addEventListener("scroll", function () {
+    setScrollTop(window.scrollY);
+  });
+
   return (
-    <header>
+    <HeaderWrapper className={cx({ "headerShadow": scrollTop > 0 })} >
       <nav className="navBar">
         <div className="navTab">Players</div>
         <div className="navTab">News</div>
@@ -12,7 +18,7 @@ const Header = () => {
           <i className="fab fa-twitch twitch"></i>
         </a>
       </nav>
-    </header>
+    </HeaderWrapper>
   );
 };
 

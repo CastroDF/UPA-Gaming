@@ -1,15 +1,15 @@
-import React, {useEffect, createRef} from "react";
+import React, { useEffect, useRef } from "react";
 import "./style.css";
 import AMD from "assets/partners/AMDPartner.svg";
 import Aorus from "assets/partners/AorusPartner.svg";
 import LogitechG from "assets/partners/LogitechGPartner.svg";
 import Twitch from "assets/partners/TwitchPartner.svg";
-import {useAppState} from "context/sectionsRef";
+import { useAppState } from "context/sectionsRef";
 
 
 const PartnersBanner = () => {
-  const {setPartnersBannerHeight} = useAppState();
-  const partnersBannerRef = createRef();
+  const { setPartnersBannerHeight } = useAppState();
+  const partnersBannerRef = useRef(null);
   useEffect(() => {
     setPartnersBannerHeight(partnersBannerRef.current.offsetTop);
   }, [partnersBannerRef, setPartnersBannerHeight]);
