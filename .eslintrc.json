@@ -1,0 +1,33 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "amd": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        // We only want double quotes
+        "quotes": ["error", "double"],
+        // We want to force semicolons
+        "semi": ["error", "always"],
+        // We use 2 spaces to indent our code
+        "indent": ["error", 2],
+        // We want to avoid useless spaces
+        "no-multi-spaces": ["error"],
+        // We don't use prop-types
+        "react/prop-types": 0
+    }
+}

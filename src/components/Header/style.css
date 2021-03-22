@@ -24,6 +24,7 @@ header {
   font-size: 1.5em;
   cursor: pointer;
   color: #82ccdd;
+  text-decoration: none;
 }
 
 .navTab:hover {
