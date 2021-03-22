@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import colorsPalette from "styles/colorsPalette";
 
 const HeaderWrapper = styled.header`
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: white;
+    background-color: ${colorsPalette.white};
     overflow: hidden;
 
   .headerShadow {
@@ -14,7 +15,6 @@ const HeaderWrapper = styled.header`
   }
 
   .navBar {
-    
   }
 
   @media (min-width: 768px) {
@@ -33,21 +33,21 @@ const HeaderWrapper = styled.header`
     font-family: "Bangers";
     font-size: 1.5em;
     cursor: pointer;
-    color: #82ccdd;
+    color: ${colorsPalette.lightBlue};
     text-decoration: none;
   }
 
   .navTab:hover {
-    color: #60a3bc;
+    color: ${colorsPalette.bleuDeFrance};
   }
 
   .twitch {
     font-size: 1.5em !important;
-    color: gray;
+    color: ${colorsPalette.gray};
   }
 
   .twitch:hover {
-    color: #9147ff;
+    color: ${colorsPalette.purple};
   }
 `;
 

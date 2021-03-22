@@ -1,13 +1,13 @@
 import React from "react";
-import "./style.css";
+import BeUPAWrapper from "./BeUPA";
 
 const BeUPA = () => {
   return (
-    <div className="floatingBottomUPA">
+    <BeUPAWrapper>
       <span className="beUPAMessage">
-                Be a UPA Member
+        Be a UPA Member
       </span>
-    </div>
+    </BeUPAWrapper>
   );
 };
 

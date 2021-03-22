@@ -1,51 +1,7 @@
 import React, {useState} from "react";
-import {useSpring, animated} from "react-spring";
-import styled, {css} from "styled-components";
-import "./style.css";
+import {useSpring} from "react-spring";
 import Maestria7 from "assets/Maestria7.png";
-
-const boxShadow = css`
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.5);
-`;
-
-const CardContainer = styled.div`
-    position: relative;
-    width: 17rem;
-    height: 25rem;
-    padding: 0;
-    margin: 0;
-    transition: all 0.5s ease-out;
-    &:hover {
-        transform: translateY(-1rem);
-    }
-`;
-
-const CardBody = styled(animated.div)`
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    will-change: transform, opacity;
-    border-radius: 0.625rem;
-    overflow: hidden;
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0);
-    transition: all 0.4s ease-out;
-    ${CardContainer}:hover & {
-        ${boxShadow}
-    }
-`;
-
-const ElevatedImage = styled.img`
-    position: absolute;
-    z-index: 20;
-    width: 3rem;
-    height: 3rem;
-    top: -2rem;
-    transition: top ease 0.8s;
-    ${CardContainer}:hover & {
-        top: -2.8rem;
-    }
-`;
+import {CardBody, CardContainer, ElevatedImage} from "./PlayerCard";
 
 const PlayerCard = ({card}) => {
   const [flipped, set] = useState(false);

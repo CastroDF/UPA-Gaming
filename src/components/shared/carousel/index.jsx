@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
-import "./style.css";
 import cx from "classnames";
+import CarouselWrapper from "./Carousel";
 
 const StyledCarousel = ({ slidesPerPage, items }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -14,7 +14,7 @@ const StyledCarousel = ({ slidesPerPage, items }) => {
   };
 
   return (
-    <div className="carouselContainer">
+    <CarouselWrapper className="carouselContainer" data-aos="fade-down" data-aos-duration={300}>
       <Carousel
         className="styledCarousel"
         slidesPerPage={slidesPerPage}
@@ -34,7 +34,7 @@ const StyledCarousel = ({ slidesPerPage, items }) => {
       disabled={currentSlide === items.length - slidesPerPage}>
         <i className="arrowIcon fas fa-angle-right"></i>
       </button>
-    </div>
+    </CarouselWrapper>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import ScrollToWrapper from "./ScrollTo";
 
 const scrollToRef = (height) => window.scrollTo(0, height);
 
@@ -7,7 +7,7 @@ const ScrollTo = ({scrollTo}) => {
   const executeScroll = () => scrollToRef(scrollTo);
 
   return (
-    <div
+    <ScrollToWrapper
       className="scrollTo"
       data-aos="fade-down"
       data-aos-delay="1000"
@@ -15,7 +15,7 @@ const ScrollTo = ({scrollTo}) => {
       onClick={executeScroll}
     >
       <i className="arrowIcon fas fa-angle-down"></i>
-    </div>
+    </ScrollToWrapper>
   );
 };
 

@@ -1,4 +1,7 @@
-.floatingBottomUPA {
+import styled from "styled-components";
+import colorsPalette from "styles/colorsPalette";
+
+const BeUPAWrapper = styled.div`
   position: fixed;
   display: flex;
   align-items: center;
@@ -11,10 +14,13 @@
   background: linear-gradient(to right, #0072ff, #00c6ff);
   padding-left: 3rem;
   padding-right: 3rem;
-}
+  cursor: pointer;
 
-.beUPAMessage {
-  color: white;
-  font-size: 1em;
-  font-family: "Bangers";
-}
+  .beUPAMessage {
+    color: ${colorsPalette.white};
+    font-size: 1em;
+    font-family: "Bangers";
+  }
+`;
+
+export default BeUPAWrapper;

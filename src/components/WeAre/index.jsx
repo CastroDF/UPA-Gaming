@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import WeAreWrapper from "./WeAre";
 import Logo from "assets/Logo.png";
 import ScrollTo from "components/shared/ScrollTo";
 import {useAppState} from "context/sectionsRef";
@@ -8,7 +8,7 @@ const WeAre = () => {
   const {partnersBannerHeight} = useAppState();
 
   return (
-    <section className="weAre">
+    <WeAreWrapper className="weAre">
       <div className="subSection">
         <p className="title">UPA GAMING</p>
         <div className="subtitle">
@@ -19,7 +19,7 @@ const WeAre = () => {
         <img className="upaLogo" src={Logo} alt="UPA Logo" />
       </div>
       <ScrollTo scrollTo={partnersBannerHeight + 50 || 0} />
-    </section>
+    </WeAreWrapper>
   );
 };
 
